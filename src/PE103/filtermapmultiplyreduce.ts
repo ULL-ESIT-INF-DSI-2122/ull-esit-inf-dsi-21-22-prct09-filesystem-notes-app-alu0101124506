@@ -1,12 +1,18 @@
 import { BaseClass } from "./baseclase";
 
-
+/**
+ * Sub-clase que extienda de la clase base
+ */
 export class FilterMapMultiplyReduce extends BaseClass {
   
   constructor(protected arrayNumber: number[]){
     super(arrayNumber);
   }
 
+   /**
+   * Implementacion de la funcion abstracta de la clase base
+   * @returns devuelve un unico numero el cual es la multiplicacion del array
+   */
   reduce(): number {
     let total: number = 1;
     this.arrayNumber.forEach((n) => {
@@ -15,6 +21,10 @@ export class FilterMapMultiplyReduce extends BaseClass {
     return total;
   }
 
+  /**
+   * Clase que unifica todos los metodos para seguir los pasos requeridos
+   * @returns devuelve un unico numero despues de filtrar y mapear el array
+   */
   hook(): number {
     this.arrayNumber = this.filterNumber((x: number) => {return (x > 10)});
     this.arrayNumber = this.mapNumber((x: number) => {return x*x});

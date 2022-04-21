@@ -1,13 +1,17 @@
-
-
+/**
+ * Clase base abstracta
+ */
 export abstract class BaseClass {
 
   constructor(protected arrayNumber: number[]){
     this.arrayNumber = arrayNumber;
   }
 
-
-  //filter(lista, (x: number) -> {x > 10})
+  /**
+   * 
+   * @param func funcion que filtra el array de numeros
+   * @returns nuevo array con los numeros que pasan el filtro
+   */
   filterNumber(func: Function): number[] {
     let array: number[] = [];
     this.arrayNumber.forEach((n) => {
@@ -18,7 +22,11 @@ export abstract class BaseClass {
     return array;
   }
 
-  //map(lista, (x: number) -> {return x*x})
+  /**
+   * 
+   * @param func funcion que hace una accion en cada elemento del array
+   * @returns nuevo array con cada elemento cambiado
+   */
   mapNumber(func: Function): number[] {
     let array: number[] = [];
     this.arrayNumber.forEach((n) => {
@@ -27,6 +35,9 @@ export abstract class BaseClass {
     return array;
   }
 
+  /**
+   * Funcion abstracta la cual se implementara en cada sub-clase
+   */
   abstract reduce (): number;
 
 }

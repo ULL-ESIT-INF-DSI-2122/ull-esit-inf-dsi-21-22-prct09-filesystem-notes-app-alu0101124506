@@ -1,6 +1,8 @@
 {
     "entryPoints": [
-        "./src/test.ts"
+        "./src/PE103/baseclase.ts",
+        "./src/PE103/filtermapaddreduce.ts",
+        "./src/PE103/filtermapmultiplyreduce.ts"
  
     ],
     "out": "./docs"
