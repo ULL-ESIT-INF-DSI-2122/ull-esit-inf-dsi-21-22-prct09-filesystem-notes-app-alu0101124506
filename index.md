@@ -1,4 +1,4 @@
-# Práctica 8 - Aplicación de procesamiento de notas de texto
+# Práctica 9 - Aplicación de procesamiento de notas de texto
 
 ## Objetivos
 
